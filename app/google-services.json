@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "596002746753",
+    "project_id": "cyptchat",
+    "storage_bucket": "cyptchat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596002746753:android:0023eae62ea5fe9827b880",
+        "android_client_info": {
+          "package_name": "com.example.cryptchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596002746753-kme9pe65n5dfd1b54fq943ae8v7ab728.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANkRNpWQTCqwQZjr172Vs1hfwgPCzWOyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596002746753-kme9pe65n5dfd1b54fq943ae8v7ab728.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

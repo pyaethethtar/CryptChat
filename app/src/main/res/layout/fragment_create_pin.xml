@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CreatePinFragment"
+    android:paddingHorizontal="@dimen/margin_xlarge"
+    android:paddingVertical="@dimen/margin_xxlarge">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleCreatePin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_create_pin"
+        android:textSize="@dimen/text_heading_1x"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleCreatePin"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:text="@string/tv_pin_description"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_grey"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescription"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:background="@color/white"
+        android:inputType="numberDecimal"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_heading_2x"
+        android:textAlignment="center"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_view"
+        android:layout_below="@id/etPin"
+        android:layout_alignStart="@id/etPin"
+        android:layout_alignEnd="@id/etPin"
+        android:background="@color/colorDisabledGray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHintPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_pin"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/text_color_grey"
+        android:textAlignment="center"
+        android:layout_below="@id/view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="@string/btn_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

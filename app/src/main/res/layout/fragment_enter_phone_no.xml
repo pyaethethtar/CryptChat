@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EnterPhoneNoFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitlePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:text="@string/tv_enter_phone"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitlePhone"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="130dp"
+        android:paddingStart="@dimen/margin_small"
+        android:text="@string/tv_country_burma"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_view"
+        android:background="@color/colorDisabledGray"
+        android:layout_below="@id/tvCountry"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginVertical="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:background="@color/white"
+        android:hint="@string/tv_enter_phone"
+        android:inputType="phone"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_small"
+        android:textColor="@color/colorPrimaryDark2"
+        android:textColorHint="@color/colorDisabledGray"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_view"
+        android:background="@color/colorDisabledGray"
+        android:layout_below="@id/etPhoneNo"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginVertical="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginBottom="@dimen/margin_xxlarge"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="@string/btn_continue"
+        android:textColor="@color/colorPrimaryGray"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/margin_large"
+    android:layout_marginBottom="@dimen/margin_medium_3"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivChatListProfileImage"
+        android:layout_width="@dimen/chat_list_profile_img_size"
+        android:layout_height="@dimen/chat_list_profile_img_size"
+        android:src="@drawable/person_128" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChatListProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivChatListProfileImage"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@id/ivChatListProfileImage"
+        android:paddingTop="@dimen/margin_medium"
+        android:text="@string/text_to_replace"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChatDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvChatListProfileName"
+        android:layout_alignBottom="@id/ivChatListProfileImage"
+        android:layout_toStartOf="@id/ivSentOrDelivered"
+        android:paddingBottom="@dimen/margin_medium"
+        android:text="Sent"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_regular_3x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvChatDescription"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="@dimen/margin_medium_2"
+        android:text="@string/text_to_replace"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_small" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSentOrDelivered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvDate"
+        android:layout_toStartOf="@id/tvDate"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:src="@drawable/ic_baseline_check_24" />
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_large_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/margin_medium_1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingVertical="@dimen/margin_medium_1"
+            android:paddingStart="@dimen/margin_card_medium"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnProfileImage"
+            android:layout_width="@dimen/btn_profile_size"
+            android:layout_height="@dimen/btn_profile_size"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/btnBack"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/person_32" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAccountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/btnProfileImage"
+            android:layout_marginStart="@dimen/margin_medium_1"
+            android:layout_toEndOf="@id/btnProfileImage"
+            android:text="@string/text_to_replace"
+            android:textColor="@color/colorPrimaryDark2"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActiveNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAccountName"
+            android:layout_alignStart="@id/tvAccountName"
+            android:layout_alignBottom="@id/btnProfileImage"
+            android:text="Active Now"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutInput"
+        android:layout_below="@id/toolbar"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="@dimen/full_size_profile_img"
+                android:layout_height="@dimen/full_size_profile_img"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/person_128" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/text_to_replace"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark2"
+                android:textSize="@dimen/text_heading_1x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_xxlarge"
+                android:text="@string/phone_to_replace"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChatMessages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="10"
+                tools:listitem="@layout/viewholder_message" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_bottom_appbar"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_card_medium"
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_message_them">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_camera_alt_24" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/margin_card_medium"
+                android:layout_toStartOf="@id/btnSend"
+                android:layout_toEndOf="@id/btnCamera"
+                android:background="@color/white"
+                android:hint="Type here..."
+                android:maxLines="5"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_regular" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_send_24"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

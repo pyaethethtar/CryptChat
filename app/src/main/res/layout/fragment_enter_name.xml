@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EnterNameFragment"
+    android:paddingHorizontal="@dimen/margin_xlarge"
+    android:paddingVertical="@dimen/margin_xxlarge">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_enter_name"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <FrameLayout
+        android:id="@+id/layoutProfileImage"
+        android:layout_width="@dimen/chat_list_profile_img_size"
+        android:layout_height="@dimen/chat_list_profile_img_size"
+        android:layout_below="@id/tvTitleName"
+        android:layout_marginTop="@dimen/margin_xxlarge">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="@dimen/chat_list_profile_img_size"
+            android:layout_height="@dimen/chat_list_profile_img_size"
+            android:src="@drawable/person_128"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_camera_blue_24"
+            android:layout_gravity="bottom|end"/>
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/layoutProfileImage"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_toEndOf="@id/layoutProfileImage"
+        android:background="@color/white"
+        android:hint="@string/hint_first_name"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:textColor="@color/colorPrimaryDark2"
+        android:textColorHint="@color/colorDisabledGray"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_view"
+        android:layout_below="@id/etFirstName"
+        android:layout_alignStart="@id/etFirstName"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:background="@color/colorDisabledGray" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_alignStart="@id/etFirstName"
+        android:background="@color/white"
+        android:hint="@string/hint_last_name"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:textColor="@color/colorPrimaryDark2"
+        android:textColorHint="@color/colorDisabledGray"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_view"
+        android:layout_below="@id/etLastName"
+        android:layout_alignStart="@id/etFirstName"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:background="@color/colorDisabledGray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="@string/btn_save"
+        android:textColor="@color/colorPrimaryGray"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+</RelativeLayout>

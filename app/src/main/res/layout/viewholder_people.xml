@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/margin_large"
+    android:layout_marginBottom="@dimen/margin_medium_3">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPeopleProfileImage"
+        android:layout_width="@dimen/chat_list_profile_img_size"
+        android:layout_height="@dimen/chat_list_profile_img_size"
+        android:padding="@dimen/margin_small"
+        android:src="@drawable/person_128" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContactName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivPeopleProfileImage"
+        android:layout_marginStart="@dimen/margin_medium_1"
+        android:layout_toEndOf="@id/ivPeopleProfileImage"
+        android:paddingTop="@dimen/margin_medium"
+        android:text="@string/text_to_replace"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_to_replace"
+        android:textSize="@dimen/text_regular_3x"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@id/ivPeopleProfileImage"
+        android:layout_alignStart="@id/tvContactName"
+        android:paddingBottom="@dimen/margin_medium"/>
+
+</RelativeLayout>
